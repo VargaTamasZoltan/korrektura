@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korrektúra</title>
+  <link rel="stylesheet" href="oldal.css">
+  <link rel="icon" href="hatter.png" sizes="64x64">
+  <style>
+    /* Stílus a gombokhoz */
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    /* Stílus a gombok szövegéhez */
+    button a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="middle-section">
+            <p>Felhasználási Feltételek</p>
+            <br>
+            <p>Köszönjük, hogy felkereste a Korrektúra honlapját. Az alábbiakban olvashatók a weboldal használatára vonatkozó feltételek, amelyek meghatározzák a látogatók és az oldal tulajdonosa közötti kapcsolatot.</p>
+        </div>
+        <div class="middle-section">
+            <ul>
+                <li><strong>Oldalhasználat Elfogadása:</strong> Az oldal használata a felhasználási feltételek elfogadását jelenti minden részletében. Amennyiben nem ért egyet ezekkel a feltételekkel, kérjük, hagyja el az oldalt.</li>
+                <li><strong>Tartalom Használata:</strong> Az oldalon található minden tartalom (szövegek, képek, videók stb.) a Korrektúra tulajdonát képezi, és védelme alatt áll. A tartalom felhasználása, másolása vagy terjesztése az engedélyünk nélkül tilos.</li>
+                <li><strong>Szolgáltatások és Felelősségvállalás:</strong> Bár minden erőfeszítést megteszünk a pontos és hiteles információk közléséért, a Korrektúra nem vállal felelősséget az esetleges hibákért vagy pontatlanságokért az oldalon található információkban. Az oldal által nyújtott szolgáltatások használata kizárólag a felhasználó saját felelősségére történik.</li>
+                <li><strong>Adatvédelem és Biztonság:</strong> Az adatvédelemmel kapcsolatos részleteket az adatvédelmi irányelveinkben találhatja meg. Az általunk gyűjtött személyes adatokat biztonságosan és gondosan kezeljük, és kizárólag az adatvédelmi szabályozásoknak megfelelően használjuk fel.</li>
+                <li><strong>Felhasználói Viselkedés:</strong> A Korrektúra fenntartja a jogot, hogy megfelelő intézkedéseket tegyen azokkal szemben, akik az oldalt visszaélésre, illetve más felhasználók vagy az oldal működésének sérelmére használják.</li>
+                <li><strong>Feltételek Módosítása:</strong> A Korrektúra fenntartja a jogot, hogy a felhasználási feltételeket bármikor módosítsa. Az új feltételek azonnal érvénybe lépnek az oldalon való megjelenésük pillanatában.</li>
+              </ul>
+        </div>
+        <div class="middle-section">
+            <p>Az oldal használatával elfogadja és beleegyez ezekbe a feltételekbe. Javasoljuk, hogy rendszeresen ellenőrizd ezeket a feltételeket, mivel azok változhatnak időről időre.</p>
+    <br>
+            <p>Amennyiben további kérdései vannak a felhasználási feltételekkel kapcsolatban, kérjük, lépj kapcsolatba velünk.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 30px;">
+        <button onclick="goBack()">Elfogadom</button>
+        <button onclick="leavePage()">Nem fogadom el</button>
+      </div>
+
+      <script>
+        // Visszalépés az előző oldalra
+        function goBack() {
+            window.location.href = 'index.html'; // Ide írd be a főoldal elérési útját
+        }
+    
+        // Oldal elhagyása és visszatérés a főoldalra
+        function leavePage() {
+          window.location.href = 'https://www.google.hu/'; // Ide írd be a főoldal elérési útját
+        }
+      </script>
+</body>
+</html>

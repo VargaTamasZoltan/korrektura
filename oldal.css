@@ -1,0 +1,306 @@
+/* Alapstílusok */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('fo\ kep.jpg');
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #FFCC99;
+}
+
+p{
+  text-align: justify;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  padding: 20px;
+  background: rgba(237, 158, 92, 0.7);
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  background: #ffcc99;
+  border-radius: 4px;
+}
+
+nav.desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+nav.desktop ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+}
+
+nav.desktop ul li {
+  margin-bottom: 0;
+  margin-right: 20px;
+  text-align: center;
+}
+
+nav.desktop ul li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  background: #ffcc99;
+  border-radius: 6px;
+}
+
+nav.desktop ul h1 {
+  margin-right: auto;
+  order: -1;
+}
+
+/* Mobilnézethez */
+@media (max-width: 768px) {
+  nav.mobile ul {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    overflow: auto;
+    background: rgb(255, 203, 83);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgb(255, 204, 0);
+    color: #000000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  body {
+    background-image: url('fo\ kep.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  nav.desktop {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  margin-bottom: 60px;
+}
+
+.left-section,
+.middle-section,
+.right-section {
+  padding: 20px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  max-width: 1200px;
+  width: calc(100% - 40px);
+}
+
+/* További stílusok a lábléchez */
+#footer {
+  background-color: #ffcc99;
+  color: #000000;
+  text-align: center;
+  padding: 0px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.menu-btn {
+  display: none; /* Számítógépes nézetben elrejtés */
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* Mobilnézetben megjelenítés */
+    /* ... további stílusok ... */
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500);
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 96px;
+  font-size: 21px;
+  
+  font-family: "Poppins", sans-serif;
+}
+section.card {
+  background: #f5f85b;
+  background: -webkit-linear-gradient(to right, #f4f960, #f5f85b); 
+  background: linear-gradient(to right, rgba(255, 174, 0, 0.7), rgba(255, 240, 110, 0.7));
+  border-radius: 24px 24px 24px 48px;
+  padding: 48px 48px 48px 308px;
+  margin: 84px 0;
+  min-width: 640px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  position: relative;
+  box-shadow: 5px 0 0 0 rgba(204,204,204,0.3), -5px 0 0 0 rgba(204,204,204,0.3), 0 5px 0 0 rgba(204,204,204,0.3);
+}
+section.card .text-content {
+  display: flex;
+  flex-direction: column;
+  width:calc(60vw - 192px);
+}
+section.card .text-content h3 {
+  margin: 0;
+  font-size: 1.5em;
+  max-width: 20ch;
+  color: #000000;
+}
+section.card .text-content p {
+  margin: 25px 0 24px;
+  color: #000000;
+}
+section.card .text-content a {
+  border: 3px solid #000000;
+  color: #000000;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  transition: 400ms all;
+}
+section.card .text-content a:hover {
+  background: #ffb700;
+  color: rgb(0, 0, 0);
+}
+section.card .visual {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: -24px;
+  left: 24px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+section.card .visual img {
+  height: 110%;
+}
+article {
+  margin: auto;
+  display: block;
+  width:calc(60vw + 248px);
+  max-width:calc(920px + 248px);
+  min-width:calc(640px + 248px); 
+}
+@media all and (max-width: 1100px) {
+  body {
+    padding: 96px 48px 24px;
+  }
+  article {
+    width: 100%;
+    min-width: 100%;
+  }
+  section.card {
+    min-width: 100%;
+  }
+  section.card .text-content {
+    width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  body {
+    padding: 48px 24px 0;
+  }
+  section.card {
+    margin: 64px 0;
+    padding: 88px 36px 36px;
+    flex-direction: column;
+    border-radius: 24px;
+  }
+  section.card .text-content h3 {
+    max-width:calc(100% - 150px);
+    font-size: 1em;
+  }
+  section.card .text-content p,
+  section.card .text-content a {
+    font-size: 0.8em;
+  }
+  section.card .visual {
+    width: 150px;
+    height: 150px;
+    right: 16px;
+    left: auto;
+    border-radius: 50%;
+  }
+  section.card .visual img{
+    width: 100%;
+    height: auto;
+    }
+}
+
+
+
+#footer a {
+  color: black;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}

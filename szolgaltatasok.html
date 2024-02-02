@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korrektúra</title>
+  <link rel="stylesheet" href="oldal.css">
+  <link rel="icon" href="hatter.png" sizes="64x64">
+</head>
+<body>
+  <nav class="desktop">
+    <ul>
+      <h1>Korrektúra</h1>
+      <li><a href="index.html">Kezdőlap</a></li>
+      <li><a href="rolunk.html">Rólam</a></li>
+      <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobile">
+    <button class="menu-btn mobile">&#9776; Menu</button>
+    <ul>
+      <li><a href="index.html">Kezdőlap</a></li>
+      <li><a href="rolunk.html">Rólam</a></li>
+      <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <section class="card">
+      <div class="text-content">
+        <h3>Szolgáltatások ára</h3>
+        <p>A szolgáltatás ára:
+          500 ft/1000 leütés a szóközökkel együtt 
+          (Áfamentes)</p>  
+          <p>A szolgáltatás ára diákok részére:
+            350 ft/1000 leütés szóközökkel együtt
+            (Áfamentes)
+            </p>
+        <a href="#tovab">Miket is vállalok?</a>
+      </div>
+      <div class="visual">
+        <img src="regi-konyvek-257963.jpg" alt="kep1" />
+      </div>
+    </section> 
+  </article>
+
+  <div class="container" id="tovab">
+    <div class="middle-section">
+      <p>Vállalom </p>
+        <br>
+        <ul style="list-style-type: disc;">
+          <li>sajtóanyagok, plakátok, prezentációk, magazin </li>
+          <li>tanulmányok, szakkönyvek, publikációk</li>
+          <li>regény, e-könyv, vers, cikk
+          </li>
+        </ul>
+        <br>
+        <p>helyesírási, nyelvhelyességi javítását, szóismétlések megszüntetését. 
+          Vállalom továbbá a szövegek átfogalmazását a könnyebb olvashatóság, érthetőség érdekében. </p>
+    </div>
+    <div class="middle-section">
+      <p>Tanulók számára vállalom</p>
+        <br>
+        <ul style="list-style-type: disc;">
+          <li>szakdolgozat, doktori disszertáció, esszé, házi dolgozat 
+          </li>
+        </ul>
+        <br>
+        <p>helyesírási, nyelvhelyességi javítását, szóismétlések megszüntetését. 
+          Vállalom továbbá a szövegek átfogalmazását a könnyebb olvashatóság, érthetőség érdekében. </p>
+    </div>
+    <div class="middle-section">
+      <p>Amennyiben a felsorolt szolgáltatások között nem szerepel az, amit keres, írjon <a href="https://www.google.com/intl/hu/gmail/about/" target="_blank">e-mailt</a>.</p>
+    </div>
+  </div>
+  
+<footer id="footer">
+  <p><a href="fel.html">Felhasználási Feltételek</a></p>
+</footer>
+  
+  
+  
+
+
+  <script>
+    // JavaScript to toggle menu on button click for mobile devices
+    const mobileMenuBtn = document.querySelector('.menu-btn.mobile');
+    const mobileNav = document.querySelector('nav.mobile ul');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Show/hide desktop navigation on resize
+    function handleDesktopNav() {
+      const desktopNav = document.querySelector('nav.desktop');
+      if (window.innerWidth >= 769) {
+        desktopNav.style.display = 'flex';
+        // Elrejti a mobilos menüt, ha a képernyőszélesség meghaladja a 768 pixelt
+        mobileNav.style.display = 'none';
+      } else {
+        desktopNav.style.display = 'none';
+      }
+    }
+
+    // Initial check for desktop navigation display
+    handleDesktopNav();
+
+    // Listen for window resize for desktop navigation
+    window.addEventListener('resize', handleDesktopNav);
+
+    window.addEventListener('scroll', function() {
+  var footer = document.getElementById('footer');
+  var windowHeight = window.innerHeight;
+  var bodyHeight = document.body.offsetHeight;
+  var windowBottom = windowHeight + window.pageYOffset;
+
+  if (windowBottom >= bodyHeight) {
+    footer.style.display = 'block';
+  } else {
+    footer.style.display = 'none';
+  }
+});
+
+  </script>
+</body>
+</html>

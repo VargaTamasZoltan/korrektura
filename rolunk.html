@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korrektúra</title>
+  <link rel="stylesheet" href="oldal.css">
+  <link rel="icon" href="hatter.png" sizes="64x64">
+</head>
+<body>
+  <nav class="desktop">
+    <ul>
+      <h1>Korrektúra</h1>
+      <li><a href="index.html">Kezdőlap</a></li>
+      <li><a href="rolunk.html">Rólam</a></li>
+      <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobile">
+    <button class="menu-btn mobile">&#9776; Menu</button>
+    <ul>
+      <li><a href="index.html">Kezdőlap</a></li>
+      <li><a href="rolunk.html">Rólam</a></li>
+      <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <section class="card">
+      <div class="text-content">
+        <h3>Rólam</h3>
+        <p>Ezt a weboldalt azért hoztam létre, hogy segítsek azoknak, akiknek szükségük van rá. Vállalom bármilyen írott dokumentum, sajtóanyag, szakdolgozat, könyv, plakát korrektúrázását. </p>  
+        <a href="#tovabba">Tovább</a>
+      </div>
+      <div class="visual">
+        <img src="regi-konyvek-257963.jpg" alt="kep1" />
+      </div>
+    </section> 
+  </article>
+
+  <div class="container" id="tovabba">
+    <div class="middle-section" >
+      <p>Tomázy Adrienn vagyok, GPS-ben szenvedő „beteg”. A GPS, Grammar pedantry syndrome, vagyis magyarul a nyelvtani tudálékosság szindróma egy olyan rendellenesség, amely azzal jár, hogy az adott személy, aki ebben „szenved”, belső késztetést érez rá, hogy kijavítsa mások nyelvhelyességi – esetleg helyesírási – hibáit. 
+      </p>
+    </div>
+    <div class="middle-section">
+      <p> Ez nálam úgy mutatkozik meg, hogy rögtön a nyelvtani hibákat látom meg egy szövegben, mielőtt még a tartalmát értelmezném. Legyen az egy plakát a villamosmegállóban, egy bejegyzés a közösségi oldalak hírfolyamában, vagy egy könyv. Úgy gondoltam, hogy ha már ebben „szenvedek”, akkor kamatoztatom ezt a képességemet. </p>
+    </div>
+    <div class="middle-section">
+      <p>Nem mellékesen írással foglalkozom már több, mint tíz éve és a korrektúrázás területén is több éves tapasztalatom van. Ezt a szakmát tanultam ugyan, de úgy gondolom, ez adottság is. 
+      </p>
+    </div>
+  </div>
+  
+<footer id="footer">
+  <p><a href="fel.html">Felhasználási Feltételek</a></p>
+</footer>
+  
+  
+  
+
+
+  <script>
+    // JavaScript to toggle menu on button click for mobile devices
+    const mobileMenuBtn = document.querySelector('.menu-btn.mobile');
+    const mobileNav = document.querySelector('nav.mobile ul');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Show/hide desktop navigation on resize
+    function handleDesktopNav() {
+      const desktopNav = document.querySelector('nav.desktop');
+      if (window.innerWidth >= 769) {
+        desktopNav.style.display = 'flex';
+        // Elrejti a mobilos menüt, ha a képernyőszélesség meghaladja a 768 pixelt
+        mobileNav.style.display = 'none';
+      } else {
+        desktopNav.style.display = 'none';
+      }
+    }
+
+    // Initial check for desktop navigation display
+    handleDesktopNav();
+
+    // Listen for window resize for desktop navigation
+    window.addEventListener('resize', handleDesktopNav);
+
+    window.addEventListener('scroll', function() {
+  var footer = document.getElementById('footer');
+  var windowHeight = window.innerHeight;
+  var bodyHeight = document.body.offsetHeight;
+  var windowBottom = windowHeight + window.pageYOffset;
+
+  if (windowBottom >= bodyHeight) {
+    footer.style.display = 'block';
+  } else {
+    footer.style.display = 'none';
+  }
+});
+
+  </script>
+</body>
+</html>
